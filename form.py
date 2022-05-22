@@ -11,10 +11,10 @@ from selenium.webdriver.support import expected_conditions as execute
 namaStr = 'muchsin'
 alamatStr = 'anjay@gmail.com'
 subjekStr = 'subjekanda ada disini'
-pesan = 'selamat driver bot anda berhasil'
+pesanStr = 'selamat driver bot anda berhasil'
 
 #ini untuk drivernya biar bisa execute
-browser = webdriver.Edge()
+browser = webdriver.Chrome()
 browser.get(('https://printing.sublimaxdigital.com/hubungi-kami/'))
 
 
@@ -39,5 +39,5 @@ subjek.send_keys(subjekStr)
 pesan = browser.find_element_by_id('forminator-field-textarea-1')
 pesan.send_keys(pesanStr)
 
-nextButton = browser.find_element_by_id('forminator-button forminator-button-submit')
+nextButton = browser.find_element_by_tag_name('button')
 nextButton.click()
